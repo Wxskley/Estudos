@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            let salarioFamilia = 880;
+            let nome = prompt("Informe seu nome");
+            let salarioBruto = Number.parseFloat(prompt("Informe seu salário"));
+            let filhos = Number.parseFloat(prompt("Informe a quantidade de filhos"));
+            let bonus = 0;
+            if (filhos >= 2 && salarioBruto <= salarioFamilia) {
+                bonus = 20 * filhos;
+            } else if (filhos > 2 && filhos <= 4 && salarioBruto <= salarioFamilia) {
+                bonus = 15 * filhos;
+            } else if (filhos > 4 && filhos <= 6 && salarioBruto <= salarioFamilia) {
+                bonus = 10 * filhos;
+            } else if (filhos > 6 && filhos <= 8 && salarioBruto <= salarioFamilia) {
+                bonus = 5 * filhos;
+            } else if (filhos > 8 && salarioBruto <= salarioFamilia) {
+                bonus = -10 * filhos;
+            }
+            let somaFinal = salarioBruto + bonus;
+            document.write("Seu nome é " + nome + "<br>");
+            document.write("Você tem " + filhos + "<br>");
+            document.write("Seu salário bruto é " + salarioBruto + "<br>");
+            document.write("Seu bônus salarial é " + bonus + "<br>");
+            document.write("Seu salário junto com o bônus é " + somaFinal);
+        </script>
+    </body>
+</html>

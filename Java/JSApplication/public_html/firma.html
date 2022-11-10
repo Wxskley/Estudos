@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            let id = Number.parseInt(prompt("Informe seu número de empregado"));
+            let id_novo = 0, id_velho = 0, tempo_novo = 1500, tempo_velho = 0, n_meses = 0;
+            while (id !== 0) {
+                let numMeses = Number.parseInt(prompt("Informe a quantidade de meses que você está trabalhando"));
+                if (n_meses > tempo_velho) {
+                    id_velho = id;
+                    tempo_velho = n_meses;
+                }
+                if (n_meses < tempo_novo) {
+                    id_novo = id;
+                    tempo_novo = n_meses;
+                }
+                id = Number.parseInt(prompt("Informe seu número de empregado"));
+            }
+            alert("Funcionário mais novo: " + id_novo + " com " + tempo_novo + " de empresa" + "\n" +
+                    "Funcionário mais velho: " + id_novo + " com " + tempo_velho + " de empresa");
+        </script>
+    </body>
+</html>

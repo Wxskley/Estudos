@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            let nome = prompt("Informe seu nome");
+            let salario = Number.parseFloat(prompt("Informe seu salário"));
+            let setor = Number.parseFloat(prompt("Informe seu setor"));
+            let gratificacao = 0;
+
+            if (setor === 1) {
+                gratificacao = 100;
+            } else if (setor === 2) {
+                gratificacao = 200;
+            } else if (setor === 3) {
+                gratificacao = 300;
+            } else {
+                alert("Setor inválido")
+            }
+            let soma = salario + gratificacao;
+            console.log("Seu nome é " + nome);
+            console.log("Seu salário é " + soma);
+            console.log("Seu setor é o " + setor);
+        </script>
+    </body>
+</html>
