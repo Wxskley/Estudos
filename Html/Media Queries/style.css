@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    background-image: linear-gradient(to right, rgba(71, 3, 180, 0), rgba(86, 14, 253, 0));
+    margin: 5px;
+    width: 40%;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.lorem {
+    font-family: monospace;
+    color: white;
+    padding: 10px;
+}
+
+@media (max-width:920px) {
+    .container {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 380px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .content {
+        margin: 5px 0px 5px 0px;
+        width: 100%;
+    }
+}
