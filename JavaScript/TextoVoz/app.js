@@ -30,20 +30,20 @@ speechBtn.addEventListener('click', function (e) {
             if (isSpeaking) {
                 synth.resume();
                 isSpeaking = false;
-                speechBtn.innerText = "Pause Speach";
+                speechBtn.innerText = "Pausar fala";
             } else {
                 synth.pause();
                 isSpeaking = true;
-                speechBtn.innerText = "Resume Speach";
+                speechBtn.innerText = "Reproduzir fala";
             }
             setInterval(() => {
                 if (!synth.speaking && !isSpeaking) {
                     isSpeaking = true;
-                    speechBtn.innerText = "Converto To Speech";
+                    speechBtn.innerText = "Converter para áudio";
                 }
             });
         } else {
-            speechBtn.innerText = "Converto To Speech";
+            speechBtn.innerText = "Converter para áudio";
         }
     }
 })
